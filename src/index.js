@@ -20,14 +20,12 @@ import Header from "./header";
 import Main from "./main";
 import Aside from "./aside";
 import Footer from "./footer";
+import Boton from "./boton";
 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
     <StrictMode>
-        <Button className='btn btn-primary'>Hola</Button>
-        <Box />
-        <Code />
         <div className="container-fluid bg-dark p-0">
         <Header /> 
         <div className="container-fluid ">
@@ -37,6 +35,7 @@ root.render(
                 </div>
                 <div className="col-md-4">
                     <Aside />
+                    <Boton />
                 </div>
             </div>
         </div>

@@ -1,28 +1,39 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import { Home } from 'react-feather';
+import { AlignJustify } from 'react-feather';
+import { Link } from 'react-feather';
+
 const Header = () => {
-        return (
-            <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="javascript:void(0)">Viland</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="javascript:void(0)">Inicio</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="javascript:void(0)">Nosotros</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="javascript:void(0)">Catalogo</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        );
+    return (
+        <Navbar expand="lg" className="bg-body-tertiary">
+          <Container>
+            <Navbar.Brand href="#home">VillandSaga</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="#home"> <Home /> </Nav.Link>
+                <Nav.Link href="#link"><Link/></Nav.Link>
+                <NavDropdown title=<AlignJustify/> id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">Thorfinn</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">
+                    Askelad
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.3">Thorkell</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.4">
+                    Separated link
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      );
 }
 
 export default Header;

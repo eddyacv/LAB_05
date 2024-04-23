@@ -1,11 +1,42 @@
 import React from 'react';
+import Carousel from 'react-bootstrap/Carousel';
+
 
 const Main = () => {
     return (
         <div className="container d-flex flex-column justify-content-center align-items-center box">
             <div className="row">
             <div className="container-sm d-flex justify-content-center pt-5 pb-5">
-            <img className="img-fluid w-50" src="https://m.media-amazon.com/images/S/pv-target-images/9deb37cdbdb22731096e44f9df44aa3b285e3a2d5e9407f8cf4a656eb009619e.jpg" alt="" />     
+                
+
+
+            <Carousel className='text-center'>
+      <Carousel.Item>
+      <img className="img-fluid w-50" src="https://m.media-amazon.com/images/S/pv-target-images/9deb37cdbdb22731096e44f9df44aa3b285e3a2d5e9407f8cf4a656eb009619e.jpg" alt="" />     
+
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img className="img-fluid " src="https://i.blogs.es/a99677/vinland-saga-temporada-2/1366_2000.jpeg" alt="" />     
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img className="img-fluid " src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/04/vinland-saga-season-2-visual.jpg" alt="" />     
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
             
             </div>    
                 
