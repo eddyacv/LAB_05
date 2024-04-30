@@ -44,7 +44,7 @@ const router = createBrowserRouter([
                         <div className="col-md-8">
                             <Main></Main>
                         </div>
-                        <div className="col-md-4">
+                        <div className="col-md-4 align-content-center">
                             <Aside></Aside>
                         </div>
                     </>
