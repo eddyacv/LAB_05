@@ -7,40 +7,57 @@ import { Code } from 'react-feather';
 import { createRoot } from "react-dom/client";
 import { StrictMode } from "react";
 
+import {
+    createBrowserRouter,
+    RouterProvider,
+} from "react-router-dom";
+import Basic from './layout/basic';
 import Button from "react-bootstrap/Button";
 import Breadcrumb from 'react-bootstrap';
 const feather = require('feather-icons');
+import Single from './single';
 
 function Navigator({name}){
 
 }
 
 
-import Header from "./header";
+
+
+
+
+import Header from "./layout/header";
 import Main from "./main";
 import Aside from "./aside";
-import Footer from "./footer";
+import Footer from "./layout/footer";
 import Boton from "./boton";
 
-const root = createRoot(document.getElementById("root"));
+const router = createBrowserRouter([
+    {
 
+        path: "/",
+        element: <Basic />,
+        children: [
+            {
+                path: '',
+                element: <>
+                    <div className="col-md-8">
+                        <Main></Main>
+                    </div>
+                    <div className="col-md-4">
+                        <Aside></Aside>
+                    </div>
+                </>
+            },
+            {
+                path: "detalle/:slug",
+                element: <Single />,
+            },
+        ],
+    },
+]);
+
+const root = createRoot(document.getElementById("root"));
 root.render(
-    <StrictMode>
-        <div className="container-fluid bg-dark p-0">
-        <Header /> 
-        <div className="container-fluid ">
-            <div className="row align-items-center">
-                <div className="col-md-8 py-4 d-flex">
-                    <Main />
-                </div>
-                <div className="col-md-4">
-                    <Aside />
-                    <Boton />
-                </div>
-            </div>
-        </div>
-        <Footer />
-        </div>
-              
-    </StrictMode>
+    <RouterProvider router={router} />
 );

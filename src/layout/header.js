@@ -4,15 +4,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import { Home } from 'react-feather';
-import { AlignJustify } from 'react-feather';
-import { Link } from 'react-feather';
+import { AlignJustify,Link,Home} from 'react-feather';
+
+import { Link as Link2 } from "react-router-dom";
 
 const Header = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            <Navbar.Brand href="#home">VillandSaga</Navbar.Brand>
+            <Navbar.Brand href="../index.js">VillandSaga</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
