@@ -12,7 +12,9 @@ const Header = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
-            <Navbar.Brand href="../index.js">VillandSaga</Navbar.Brand>
+            
+            <Link2 class="navbar-brand" to="/">VillandSaga</Link2>
+              
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">

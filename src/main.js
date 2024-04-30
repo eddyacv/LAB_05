@@ -2,6 +2,7 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import './style.css';
 import portadas from './data/portada.json';
+import { Link as Link2 } from 'react-router-dom';
 
 
 
@@ -20,12 +21,13 @@ const Main = () => {
 
             return(
               <Carousel.Item>
+                <Link2 to={`/detalle/${it.slug}`}>
                 <img
                   className="d-block w-100"
                   src={it.url}
                   alt={it.name}
                   
-                />
+                /></Link2>
                 <Carousel.Caption>
                   <h3>{it.name}</h3>
                 </Carousel.Caption>

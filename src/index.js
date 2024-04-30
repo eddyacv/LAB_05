@@ -34,20 +34,21 @@ import Boton from "./boton";
 
 const router = createBrowserRouter([
     {
-
         path: "/",
         element: <Basic />,
         children: [
             {
                 path: '',
-                element: <>
-                    <div className="col-md-8">
-                        <Main></Main>
-                    </div>
-                    <div className="col-md-4">
-                        <Aside></Aside>
-                    </div>
-                </>
+                element: (
+                    <>
+                        <div className="col-md-8">
+                            <Main></Main>
+                        </div>
+                        <div className="col-md-4">
+                            <Aside></Aside>
+                        </div>
+                    </>
+                )
             },
             {
                 path: "detalle/:slug",
@@ -55,6 +56,20 @@ const router = createBrowserRouter([
             },
         ],
     },
+    {
+        path: "/P1",
+        element: <Basic />,
+        children: [
+            {
+                path: '',
+                element: (
+                    <>
+                       <Single/>
+                    </>
+                )
+            }
+        ]
+    }
 ]);
 
 const root = createRoot(document.getElementById("root"));
