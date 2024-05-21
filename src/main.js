@@ -20,10 +20,13 @@ const Main = () => {
           {portadas.map(it =>{
 
             return(
-              <Carousel.Item>
+              <Carousel.Item >
                 <Link2 to={`/detalle/${it.slug}`}>
+
+
                 <img
-                  className="d-block w-100"
+                  className="d-block w-100 img-sombra"
+
                   src={it.url}
                   alt={it.name}
                   
@@ -31,7 +34,7 @@ const Main = () => {
                 <Carousel.Caption>
                   <h3>{it.name}</h3>
                 </Carousel.Caption>
-              </Carousel.Item>
+              </Carousel.Item >
             )
 
           })}

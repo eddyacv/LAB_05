@@ -11,13 +11,14 @@ import { Link as Link2 } from "react-router-dom";
 const Header = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
+          <Container className='d-flex justify-content-space-around'>
             
             <Link2 class="navbar-brand" to="/">VillandSaga</Link2>
               
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav className="me-auto b-auto d-flex justify-content-around m0">
+
                 <Nav.Link href="#home"> <Home /> </Nav.Link>
                 <Nav.Link href="#link"><Link/></Nav.Link>
                 <NavDropdown title=<AlignJustify/> id="basic-nav-dropdown">
@@ -32,6 +33,7 @@ const Header = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
+
             </Navbar.Collapse>
           </Container>
         </Navbar>
